@@ -10,7 +10,7 @@ namespace pokemonAgoraVai.models
 {
     internal class ChamaPokemon
     {
-        Pokemon2 pokemon1;
+       public Pokemon2 pokemon1;
 
         public async void chamaPokemon(string pokemon)
         {

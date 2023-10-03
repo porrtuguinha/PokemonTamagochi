@@ -8,6 +8,9 @@ namespace pokemonAgoraVai.models
 {
     public class Pokemon2
     {
+        public int energia = 100;
+        public int alimentação = 100;
+        public int Humor = 100;
         public int id { get; set; }
         public string name { get; set; }
         public int base_experience { get; set; }
