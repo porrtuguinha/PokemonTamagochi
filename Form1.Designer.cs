@@ -47,6 +47,7 @@
             this.humor = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.bemVindo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -237,11 +238,22 @@
             this.bemVindo.TabIndex = 18;
             this.bemVindo.Text = "insira o nome do pokemon que quer adotar:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(469, 337);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 13);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "POKEMON iNVÁLIDO";
+            this.label1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bemVindo);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.humor);
@@ -292,6 +304,7 @@
         private System.Windows.Forms.Label humor;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label bemVindo;
+        public System.Windows.Forms.Label label1;
     }
 }
 

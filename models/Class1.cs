@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace pokemonAgoraVai.models
 {
@@ -14,13 +15,19 @@ namespace pokemonAgoraVai.models
 
         public async void chamaPokemon(string pokemon)
         {
-
-            string link = $"https://pokeapi.co/api/v2/pokemon/{pokemon}";
-            var rest = new RestClient(link);
-            var resposta = new RestRequest(link, Method.Get);
-            var request = rest.ExecuteGetAsync(resposta);
-            pokemon1 = JsonSerializer.Deserialize<Pokemon2>(request.Result.Content);
+            try
+            {
+                string link = $"https://pokeapi.co/api/v2/pokemon/{pokemon}";
+                var rest = new RestClient(link);
+                var resposta = new RestRequest(link, Method.Get);
+                var request = rest.ExecuteGetAsync(resposta);
+                pokemon1 = JsonSerializer.Deserialize<Pokemon2>(request.Result.Content);
+            }catch (Exception ex)
+            {
+                pokemon1 = null;
+            }
         }
+            
 
         internal void chamaPokemon(object pokemonEscolhido)
         {

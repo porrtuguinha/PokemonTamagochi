@@ -25,45 +25,59 @@ namespace pokemonAgoraVai
         {   
             ChamaPokemon conecta = new ChamaPokemon();
         int aleatorio = random.Next(4000);
-          
-            conecta.chamaPokemon(textoEscolha.Text);
-            Pokemon2 pokemon = conecta.pokemon1;
-            pictureBox1.WaitOnLoad = false;
-            if (aleatorio == 3876)
+            try
             {
-                pictureBox1.LoadAsync(pokemon.sprites.front_shiny);
-            } else
-            {
-                pictureBox1.LoadAsync(pokemon.sprites.front_default);
-            }
-            nomeD.Visible = true;
-            nome.Text = pokemon.name;
-            foreach(Type tipo1 in pokemon.types)
-            {
-                tipos.Items.Add(tipo1.type.name);
-            }
-            tipoD.Visible = true;
-            tipos.Visible = true;
-            peso.Text = pokemon.weight.ToString() + " Gramas";
-            pesoD.Visible = true;
-            peso.Visible = true;
-            altura.Text = pokemon.height.ToString();
-            altura.Visible = true;
-            alturaD.Visible = true;
-            energia.Text = pokemon.energia.ToString();
-            energiaD.Visible = true;
-            energia.Visible = true;
-            Alimentacao.Text = pokemon.alimentação.ToString();
-            Alimentacao.Visible = true;
-            alimentacaoD.Visible = true;
-            humor.Text = pokemon.Humor.ToString();
-            HumorD.Visible = true;
-            humor.Visible = true;
-            bemVindo.Visible = false;
-            textoEscolha.Visible = false;
-            button1.Visible = false;
+                conecta.chamaPokemon(textoEscolha.Text);
+                Pokemon2 pokemon = conecta.pokemon1;
+                if (pokemon == null)
+                {
+                    label1.Visible = true;
+                }
+                else
+                {
+                    label1.Visible = false;
+                    pictureBox1.WaitOnLoad = false;
+                    if (aleatorio == 3876)
+                    {
+                        pictureBox1.LoadAsync(pokemon.sprites.front_shiny);
+                    }
+                    else
+                    {
+                        pictureBox1.LoadAsync(pokemon.sprites.front_default);
+                    }
+                    nomeD.Visible = true;
+                    nome.Text = pokemon.name;
+                    foreach (Type tipo1 in pokemon.types)
+                    {
+                        tipos.Items.Add(tipo1.type.name);
+                    }
+                    tipoD.Visible = true;
+                    tipos.Visible = true;
+                    peso.Text = pokemon.weight.ToString() + " Gramas";
+                    pesoD.Visible = true;
+                    peso.Visible = true;
+                    altura.Text = pokemon.height.ToString();
+                    altura.Visible = true;
+                    alturaD.Visible = true;
+                    energia.Text = pokemon.energia.ToString();
+                    energiaD.Visible = true;
+                    energia.Visible = true;
+                    Alimentacao.Text = pokemon.alimentação.ToString();
+                    Alimentacao.Visible = true;
+                    alimentacaoD.Visible = true;
+                    humor.Text = pokemon.Humor.ToString();
+                    HumorD.Visible = true;
+                    humor.Visible = true;
+                    bemVindo.Visible = false;
+                    textoEscolha.Visible = false;
+                    button1.Visible = false;
 
-            
+                }
+            }
+            catch (Exception erro)
+            {
+                label1.Visible = true;
+            }
             
             
 
@@ -96,6 +110,10 @@ namespace pokemonAgoraVai
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void mudaForma()
         {
 
         }
