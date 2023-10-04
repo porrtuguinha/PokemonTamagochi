@@ -9,11 +9,11 @@ using System.Windows.Forms;
 
 namespace pokemonAgoraVai.models
 {
-    public  class ChamaPokemon
+    public static class ChamaPokemon
     {
-       public   Pokemon2 pokemon1;
+        public static Pokemon2 pokemon1;
 
-        public async void chamaPokemon(string pokemon)
+        public static Pokemon2  chamaPokemon(string pokemon)
         {
             try
             {
@@ -22,17 +22,15 @@ namespace pokemonAgoraVai.models
                 var resposta = new RestRequest(link, Method.Get);
                 var request = rest.ExecuteGetAsync(resposta);
                 pokemon1 = JsonSerializer.Deserialize<Pokemon2>(request.Result.Content);
-            }catch (Exception ex)
+            } catch (Exception ex)
             {
                 pokemon1 = null;
             }
+                return pokemon1;  
         }
+
             
 
-        internal void chamaPokemon(object pokemonEscolhido)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
 

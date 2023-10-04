@@ -14,7 +14,7 @@ using Type = pokemonAgoraVai.models.Type;
 namespace pokemonAgoraVai
 {
     public partial class Form1 : Form
-    { 
+    {
         Random random = new Random();
         public Form1()
         {
@@ -22,13 +22,13 @@ namespace pokemonAgoraVai
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {   
-            ChamaPokemon conecta = new ChamaPokemon();
-        int aleatorio = random.Next(4000);
+        {
+
+            int aleatorio = random.Next(4000);
             try
             {
-                conecta.chamaPokemon(textoEscolha.Text);
-                Pokemon2 pokemon = conecta.pokemon1;
+                ChamaPokemon.chamaPokemon(textoEscolha.Text);
+                Pokemon2 pokemon = ChamaPokemon.pokemon1;
                 if (pokemon == null)
                 {
                     label1.Visible = true;
@@ -71,6 +71,11 @@ namespace pokemonAgoraVai
                     bemVindo.Visible = false;
                     textoEscolha.Visible = false;
                     button1.Visible = false;
+                    foreach(Move golpe in pokemon.moves)
+                    {
+                        golpes.Items.Add(golpe.move.name);
+                    }
+                    golpes.Visible = true;
 
                 }
             }
@@ -78,8 +83,8 @@ namespace pokemonAgoraVai
             {
                 label1.Visible = true;
             }
-            
-            
+
+
 
 
         }
@@ -113,9 +118,7 @@ namespace pokemonAgoraVai
         {
 
         }
-        public void mudaForma()
-        {
-
-        }
     }
+
 }
+
