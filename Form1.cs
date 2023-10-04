@@ -15,6 +15,7 @@ namespace pokemonAgoraVai
 {
     public partial class Form1 : Form
     { 
+        Random random = new Random();
         public Form1()
         {
             InitializeComponent();
@@ -23,11 +24,18 @@ namespace pokemonAgoraVai
         private void button1_Click(object sender, EventArgs e)
         {   
             ChamaPokemon conecta = new ChamaPokemon();
+        int aleatorio = random.Next(4000);
           
             conecta.chamaPokemon(textoEscolha.Text);
             Pokemon2 pokemon = conecta.pokemon1;
             pictureBox1.WaitOnLoad = false;
-            pictureBox1.LoadAsync(pokemon.sprites.front_default);
+            if (aleatorio == 3876)
+            {
+                pictureBox1.LoadAsync(pokemon.sprites.front_shiny);
+            } else
+            {
+                pictureBox1.LoadAsync(pokemon.sprites.front_default);
+            }
             nomeD.Visible = true;
             nome.Text = pokemon.name;
             foreach(Type tipo1 in pokemon.types)

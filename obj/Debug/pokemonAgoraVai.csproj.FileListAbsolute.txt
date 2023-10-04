@@ -53,7 +53,6 @@ C:\Users\Thiago\Source\Repos\PokemonTamagochi\bin\Debug\System.Text.Json.xml
 C:\Users\Thiago\Source\Repos\PokemonTamagochi\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Thiago\Source\Repos\PokemonTamagochi\bin\Debug\System.ValueTuple.xml
 C:\Users\Thiago\Source\Repos\PokemonTamagochi\obj\Debug\pokemonAgoraVai.csproj.AssemblyReference.cache
-C:\Users\Thiago\Source\Repos\PokemonTamagochi\obj\Debug\pokemonAgoraVai.csproj.SuggestedBindingRedirects.cache
 C:\Users\Thiago\Source\Repos\PokemonTamagochi\obj\Debug\pokemonAgoraVai.Form1.resources
 C:\Users\Thiago\Source\Repos\PokemonTamagochi\obj\Debug\pokemonAgoraVai.Properties.Resources.resources
 C:\Users\Thiago\Source\Repos\PokemonTamagochi\obj\Debug\pokemonAgoraVai.csproj.GenerateResource.cache
@@ -61,3 +60,5 @@ C:\Users\Thiago\Source\Repos\PokemonTamagochi\obj\Debug\pokemonAgoraVai.csproj.C
 C:\Users\Thiago\Source\Repos\PokemonTamagochi\obj\Debug\pokemonAgoraVai.csproj.CopyComplete
 C:\Users\Thiago\Source\Repos\PokemonTamagochi\obj\Debug\pokemonAgoraVai.exe
 C:\Users\Thiago\Source\Repos\PokemonTamagochi\obj\Debug\pokemonAgoraVai.pdb
+C:\Users\Thiago\source\repos\PokemonTamagochi\bin\Debug\MySql.Data.dll
+C:\Users\Thiago\source\repos\PokemonTamagochi\bin\Debug\MySql.Data.xml
