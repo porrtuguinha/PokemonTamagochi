@@ -1,4 +1,5 @@
-﻿using pokemonAgoraVai.models;
+﻿using pokemonAgoraVai.ConexaoBanco;
+using pokemonAgoraVai.models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,8 @@ namespace pokemonAgoraVai
         {
 
             int aleatorio = random.Next(4000);
+            PokemonInserir inserir = new PokemonInserir();
+            inserir.inserir(textoEscolha.Text);
             try
             {
                 ChamaPokemon.chamaPokemon(textoEscolha.Text);
