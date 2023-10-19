@@ -33,12 +33,13 @@ public Form1()
             try
             {
                 int aleatorio = random.Next(4000);
+                int aleatorio2 = random.Next(4000);
                 PokemonInserir inserir = new PokemonInserir();
                 inserir.inserir(textoEscolha.Text);
                 pokemon = ChamaPokemon.chamaPokemon(textoEscolha.Text);
                 label1.Visible = false;
                 pictureBox1.WaitOnLoad = false;
-                if (aleatorio == 3876)
+                if (aleatorio == aleatorio2)
                 {
                     pictureBox1.LoadAsync(pokemon.sprites.front_shiny);
                 }
