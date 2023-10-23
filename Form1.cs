@@ -186,9 +186,11 @@ public Form1()
                     {
                         pokemon.alimentação += 40;
                     }
-                    else if (pokemon.alimentação > 100)
+                    else if (pokemon.alimentação >= 100)
                 {
                     pokemon.alimentação = 100;
+                pokemon.weight++;
+                peso.Text = $"{pokemon.weight.ToString()} Gramas;";
 
                 }
               
