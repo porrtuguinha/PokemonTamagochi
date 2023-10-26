@@ -48,8 +48,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.bemVindo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.golpes = new System.Windows.Forms.ListBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.comer = new System.Windows.Forms.Button();
+            this.dormir = new System.Windows.Forms.Button();
+            this.log = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,7 +132,7 @@
             // pesoD
             // 
             this.pesoD.AutoSize = true;
-            this.pesoD.Location = new System.Drawing.Point(562, 273);
+            this.pesoD.Location = new System.Drawing.Point(584, 273);
             this.pesoD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pesoD.Name = "pesoD";
             this.pesoD.Size = new System.Drawing.Size(44, 16);
@@ -140,7 +143,7 @@
             // peso
             // 
             this.peso.AutoSize = true;
-            this.peso.Location = new System.Drawing.Point(649, 273);
+            this.peso.Location = new System.Drawing.Point(676, 273);
             this.peso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.peso.Name = "peso";
             this.peso.Size = new System.Drawing.Size(44, 16);
@@ -151,7 +154,7 @@
             // alturaD
             // 
             this.alturaD.AutoSize = true;
-            this.alturaD.Location = new System.Drawing.Point(558, 323);
+            this.alturaD.Location = new System.Drawing.Point(582, 322);
             this.alturaD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.alturaD.Name = "alturaD";
             this.alturaD.Size = new System.Drawing.Size(46, 16);
@@ -162,7 +165,7 @@
             // altura
             // 
             this.altura.AutoSize = true;
-            this.altura.Location = new System.Drawing.Point(649, 323);
+            this.altura.Location = new System.Drawing.Point(676, 322);
             this.altura.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.altura.Name = "altura";
             this.altura.Size = new System.Drawing.Size(44, 16);
@@ -261,22 +264,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(625, 415);
+            this.label1.Location = new System.Drawing.Point(613, 414);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 16);
             this.label1.TabIndex = 19;
             this.label1.Text = "POKEMON iNVÁLIDO";
             this.label1.Visible = false;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(719, 33);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 18);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // golpes
             // 
@@ -289,13 +283,59 @@
             this.golpes.TabIndex = 21;
             this.golpes.Visible = false;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(174, 301);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(123, 37);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Brincar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // comer
+            // 
+            this.comer.Location = new System.Drawing.Point(303, 301);
+            this.comer.Name = "comer";
+            this.comer.Size = new System.Drawing.Size(123, 37);
+            this.comer.TabIndex = 23;
+            this.comer.Text = "Comer";
+            this.comer.UseVisualStyleBackColor = true;
+            this.comer.Visible = false;
+            this.comer.Click += new System.EventHandler(this.comer_Click);
+            // 
+            // dormir
+            // 
+            this.dormir.Location = new System.Drawing.Point(432, 301);
+            this.dormir.Name = "dormir";
+            this.dormir.Size = new System.Drawing.Size(123, 37);
+            this.dormir.TabIndex = 24;
+            this.dormir.Text = "Dormir";
+            this.dormir.UseVisualStyleBackColor = true;
+            this.dormir.Visible = false;
+            this.dormir.Click += new System.EventHandler(this.dormir_Click);
+            // 
+            // log
+            // 
+            this.log.AutoSize = true;
+            this.log.Location = new System.Drawing.Point(127, 253);
+            this.log.Name = "log";
+            this.log.Size = new System.Drawing.Size(44, 16);
+            this.log.TabIndex = 25;
+            this.log.Text = "label2";
+            this.log.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.log);
+            this.Controls.Add(this.dormir);
+            this.Controls.Add(this.comer);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.golpes);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bemVindo);
             this.Controls.Add(this.button2);
@@ -348,8 +388,11 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label bemVindo;
         public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox golpes;
+        private System.Windows.Forms.Button comer;
+        private System.Windows.Forms.Button dormir;
+        private System.Windows.Forms.Label log;
+        private System.Windows.Forms.Button button4;
     }
 }
 
