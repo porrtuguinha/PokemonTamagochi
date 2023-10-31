@@ -35,55 +35,62 @@ public Form1()
                 int aleatorio = random.Next(4000);
                 int aleatorio2 = random.Next(4000);
                 PokemonInserir inserir = new PokemonInserir();
-                inserir.inserir(textoEscolha.Text);
                 pokemon = ChamaPokemon.chamaPokemon(textoEscolha.Text);
-                label1.Visible = false;
-                pictureBox1.WaitOnLoad = false;
-                if (aleatorio == aleatorio2)
+                if (pokemon != null)
                 {
-                    pictureBox1.LoadAsync(pokemon.sprites.front_shiny);
+                    inserir.inserir(textoEscolha.Text);
+                    label1.Visible = false;
+                    pictureBox1.WaitOnLoad = false;
+                    if (aleatorio == aleatorio2)
+                    {
+                        pictureBox1.LoadAsync(pokemon.sprites.front_shiny);
+                    }
+                    else
+                    {
+                        pictureBox1.LoadAsync(pokemon.sprites.front_default);
+                    }
+                    nomeD.Visible = true;
+                    nome.Text = pokemon.name;
+                    foreach (Type tipo1 in pokemon.types)
+                    {
+                        tipos.Items.Add(tipo1.type.name);
+                    }
+                    tipoD.Visible = true;
+                    tipos.Visible = true;
+                    peso.Text = pokemon.weight.ToString() + " Gramas";
+                    pesoD.Visible = true;
+                    peso.Visible = true;
+                    altura.Text = pokemon.height.ToString();
+                    altura.Visible = true;
+                    alturaD.Visible = true;
+                    energia.Text = pokemon.energia.ToString();
+                    energiaD.Visible = true;
+                    energia.Visible = true;
+                    Alimentacao.Text = pokemon.alimentação.ToString();
+                    Alimentacao.Visible = true;
+                    alimentacaoD.Visible = true;
+                    humor.Text = pokemon.Humor.ToString();
+                    HumorD.Visible = true;
+                    humor.Visible = true;
+                    bemVindo.Visible = false;
+                    textoEscolha.Visible = false;
+                    button1.Visible = false;
+                    foreach (Move golpe in pokemon.moves)
+                    {
+                        golpes.Items.Add(golpe.move.name);
+                    }
+                    golpes.Visible = true;
+                    button4.Visible = true;
+                    dormir.Visible = true;
+                    comer.Visible = true;
                 }
                 else
                 {
-                    pictureBox1.LoadAsync(pokemon.sprites.front_default);
+                    label1.Visible = true;
                 }
-                nomeD.Visible = true;
-                nome.Text = pokemon.name;
-                foreach (Type tipo1 in pokemon.types)
-                {
-                    tipos.Items.Add(tipo1.type.name);
-                }
-                tipoD.Visible = true;
-                tipos.Visible = true;
-                peso.Text = pokemon.weight.ToString() + " Gramas";
-                pesoD.Visible = true;
-                peso.Visible = true;
-                altura.Text = pokemon.height.ToString();
-                altura.Visible = true;
-                alturaD.Visible = true;
-                energia.Text = pokemon.energia.ToString();
-                energiaD.Visible = true;
-                energia.Visible = true;
-                Alimentacao.Text = pokemon.alimentação.ToString();
-                Alimentacao.Visible = true;
-                alimentacaoD.Visible = true;
-                humor.Text = pokemon.Humor.ToString();
-                HumorD.Visible = true;
-                humor.Visible = true;
-                bemVindo.Visible = false;
-                textoEscolha.Visible = false;
-                button1.Visible = false;
-                foreach (Move golpe in pokemon.moves)
-                {
-                    golpes.Items.Add(golpe.move.name);
-                }
-                golpes.Visible = true;
-                button4.Visible = true;
-                dormir.Visible = true;
-                comer.Visible = true;
 
             }
-            catch (Exception erro)
+            catch (NullReferenceException erro)
             {
                 label1.Visible = true;
             }
