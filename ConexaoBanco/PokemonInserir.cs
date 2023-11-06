@@ -22,7 +22,7 @@ namespace pokemonAgoraVai.ConexaoBanco
             cmd.Connection = conecta.conectar();
                 cmd.ExecuteNonQuery();
                 conecta.Desconectar();
-            } catch(SqlException ex)
+            } catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
