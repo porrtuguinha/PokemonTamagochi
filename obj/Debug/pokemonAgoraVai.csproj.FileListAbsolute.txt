@@ -93,8 +93,6 @@ C:\Users\Usuario\Source\Repos\PokemonTamagochi\bin\Debug\System.Text.Json.xml
 C:\Users\Usuario\Source\Repos\PokemonTamagochi\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Usuario\Source\Repos\PokemonTamagochi\bin\Debug\System.ValueTuple.xml
 C:\Users\Usuario\Source\Repos\PokemonTamagochi\obj\Debug\pokemonAgoraVai.csproj.CopyComplete
-C:\Users\Thiago\source\repos\PokemonTamagochiGit\bin\Debug\Pokemon.mdf
-C:\Users\Thiago\source\repos\PokemonTamagochiGit\bin\Debug\Pokemon_log.ldf
 C:\Users\Thiago\source\repos\PokemonTamagochiGit\bin\Debug\pokemonAgoraVai.exe.config
 C:\Users\Thiago\source\repos\PokemonTamagochiGit\bin\Debug\pokemonAgoraVai.exe
 C:\Users\Thiago\source\repos\PokemonTamagochiGit\bin\Debug\pokemonAgoraVai.pdb
