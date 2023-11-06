@@ -24,7 +24,7 @@ namespace pokemonAgoraVai.models
                 pokemon1 = JsonSerializer.Deserialize<Pokemon2>(request.Result.Content);
             } catch (Exception ex)
             {
-                pokemon1 = null;
+                return null;
             }
                 return pokemon1;  
         }

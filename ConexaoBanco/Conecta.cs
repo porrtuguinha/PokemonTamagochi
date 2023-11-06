@@ -11,7 +11,7 @@ namespace pokemonAgoraVai.ConexaoBanco
        public SqlConnection con = new SqlConnection();
         public Conecta()
         {
-            con.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Usuario\\Desktop\\Pokemon.mdf;Integrated Security=True;Connect Timeout=30";
+            con.ConnectionString = null;
 
 
         }
