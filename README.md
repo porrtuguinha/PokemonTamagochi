@@ -26,5 +26,5 @@ bom divertimento
 <br></br>
 - Extraia a pasta do arquivo zip
 <br></br>
-- vá até bin/release e execute o pokemonAgoraVai
+-  execute o atalho presente na pasta principal
 
